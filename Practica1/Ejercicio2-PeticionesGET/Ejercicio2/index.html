@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--<script src="js/peticiones.js"></script>-->
+    <title>CRUD </title>
+</head>
+<body>
+
+    <header class="text-center mt-2">
+        <h2> Información de Usuarios </h2>
+    </header>
+
+
+    <section class="container text-center mt-4 ">
+        <button onclick="getUsers()" class="btn btn-outline-secondary rounded-pill mb-4"> Obtener todos los usuarios </button>
+        <nav class=""  style="display:none" id="pagination">
+            <ul class="pagination pagination-sm  d-flex justify-content-center">
+              <li class="page-item mx-2" id="pag-1"><a class="page-link" style="cursor: pointer;" onclick="getUsers('1')" > 1</a></li>
+              <li class="page-item" id="pag-2"><a class="page-link" style="cursor: pointer;" onclick="getUsers('2')"> 2</a></li>
+            </ul>
+        </nav>
+        <div id="list-users" class="d-flex flex-wrap justify-content-start"> </div>
+    </section>
+    
+    <script src="js/peticiones.js"></script>
+
+</body>
+</html>
